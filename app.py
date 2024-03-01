@@ -18,9 +18,6 @@ import os
 
 
 
-load_dotenv()  # Load environment variables
-password = os.environ.get("MONGO_PWD")
-
 app = Flask(__name__)
 app.config["SECRET_KEY"] = "db24c608640f5034b30b8e1e1eb5618ed0ffdbf5"
 # Set up Flask-PyMongo
