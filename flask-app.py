@@ -32,8 +32,7 @@ password=os.environ.get("MONGO_PWD")
 Connectionstr=f"mongodb+srv://kaushalcoder:.BDLP$v6ucsi5yB@saces.vv0oomh.mongodb.net/?retryWrites=true&w=majority&appName=saces"
 client =MongoClient(Connectionstr)
 
-# Assuming you have already connected to the MongoDB server
-from pymongo import MongoClient
+
 
 # Create a MongoClient instance
 client = MongoClient(Connectionstr)
@@ -44,12 +43,7 @@ collection = db.saces_data  # Replace 'mycollection' with your actual collection
 # Assuming you have already connected to the MongoDB server
 # ...
 
-# Fetch all documents from the collection
-all_documents = collection.find()
-data_cursor = db.saces_data.find()
-
-    # Convert the cursor to a list of dictionaries
-data_list = list(data_cursor)
+# F
 
 # Define a simple form
 class MyForm(FlaskForm):
@@ -130,5 +124,6 @@ def search_recipes(query):
     data = response.json()
     return data.get('hits', [])
 
+    
 if __name__ == '__main__':
     app.run(debug=True)

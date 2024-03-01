@@ -86,3 +86,7 @@ img{
     justify-content: space-around;
     align-items: center;
 }
+.my-bg{
+width:100vw;
+height:100vh;
+}
