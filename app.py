@@ -25,7 +25,7 @@ app = Flask(__name__)
 app.config["SECRET_KEY"] = "db24c608640f5034b30b8e1e1eb5618ed0ffdbf5"
 # Set up Flask-PyMongo
 app.config["MONGO_URI"] = f"mongodb+srv://kaushalcoder:.BDLP$v6ucsi5yB@saces.vv0oomh.mongodb.net/?retryWrites=true&w=majority&appName=saces"
-mongodb_client = PyMongo(app)
+
 
 from pymongo import MongoClient
 password=os.environ.get("MONGO_PWD")
