@@ -14,30 +14,58 @@
         <nav  class="navbar"><a href="#" class="sc-name " >S.A.C.E.S APP</a>
         
           <ul class="nav-menu">
-            <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="" class="nav-link">Home</a></li>
             <li class="nav-item"><a href="games-index" class="nav-link">Games</a></li>
             <li class="nav-item"><a href="recipe" class="nav-link">Recipe</a></li>
-            <li class="nav-item"><a href="feedback" class="nav-link">Feedback</a></li>
+           
 
             </ul>
 
 
 <div class="hamburger">
-    <span class="bar"></span>
-    <span class="bar"></span>
-    <span class="bar"></span>
+   
+    <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn">See Games</button>
+        <div id="myDropdown" class="dropdown-content">
+            <li class="nav-item"><a href="" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="games-index" class="nav-link">Games</a></li>
+            <li class="nav-item"><a href="recipe" class="nav-link">Recipe</a></li>
+            
+        </div>
+      </div>
 </div>
 
 </nav>
 
     </div>
+    
+<script>
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+    
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+    </script>
     <div class="body">
 <div class ='container'>
         <div class="big-text">
-  trying out  <b>something</b>
+  Our Landing<b>Page</b>
         </div>
-        <div class="small-text">info of  something you should  
-            know
+        <div class="small-text">Made using  HTML and CSS
         </div>
         <div class="btns">      
       
@@ -52,12 +80,25 @@
 
     <div class="info-data">
         
-        <div class="abt-us">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            Odit illum autem aliquid repellat ab cupiditate, dolorum deleniti minus rerum inventore
-             dolor, non atque consectetur quo repellendus. 
-             Nulla velit rem excepturi eligendi corporis explicabo iusto officiis eius,
-              obcaecati tempore? Tempora, ex velit dolorem quasi adipisci nulla possimus,
-             voluptas doloribus alias sit provident dolor corrupti perspiciatis? Fuga, possimus!</div>
+        <div class="abt-us">HTML (Hypertext Markup Language):
+            HTML provides the structural framework for web pages.
+            It defines the layout, text, images, and links on a webpage.
+            Advantages:
+            Widely Supported: All browsers recognize HTML, ensuring consistent rendering.
+            Learnability: It’s easy to learn and use.
+            Foundation: HTML, along with graphics and scripting, forms the basis for web development.
+            
+            CSS
+            
+            CSS (Cascading Style Sheets):
+            CSS controls the visual design and layout of web elements.
+            It allows designers to:
+            Define fonts, colors, spacing, and responsive designs.
+            Maintain consistency across a website.
+            Advantages:
+            Visual Presentation: Enhances aesthetics.
+            Separation of Concerns: Separates content from presentation.
+            Efficiency: Global design changes via CSS rules.</div>
              <img src="../static/assets/content-img.png" alt="">
             </div>
 
@@ -69,13 +110,13 @@
                         <!-- Front content -->
                         <div class="logo"><img src="../static/assets/something1.png" alt="Logo"></div>
                         <div class="content">
-                            <div class="title">Something1</div>
-                            <div class="caption">Why this something?</div>
+                            <div class="title">Streamlined Collaboration</div>
+                            <div class="caption">How knowledge of HTML and CSS enhance collab?</div>
                         </div>
                     </div>
                     <div class="flip-card-back">
                         <!-- Back content -->
-                        <p>Loremit. Numquam optio repellendus provident esse sapiente, vel asperiores, sequi reiciendis consectetur dignissimos nam ad ipsum eius n repudiandae vero beatae ratione ex. Sapiente, rem!</p>
+                        <p> Understanding these languages helps professionals collaborate effectively with web developers, streamlining communication and saving time1.</p>
                     </div>
                 </div>
             </div>
@@ -86,13 +127,13 @@
                         <!-- Front content -->
                         <div class="logo"><img src="../static/assets/something1.png" alt="Logo"></div>
                         <div class="content">
-                            <div class="title">Something1</div>
-                            <div class="caption">Why this something?</div>
+                            <div class="title">Visual Enhancement</div>
+                            <div class="caption">What role does CSS play in web design?</div>
                         </div>
                     </div>
                     <div class="flip-card-back">
                         <!-- Back content -->
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam optio repellendus provident esse sapiente, vel asperiores, sequi reiciendis consectetur dignissimos nam ad ipsum eius n repudiandae vero beatae ratione ex. Sapiente, rem!</p>
+                        <p>CSS dresses up HTML’s raw structure, applying formatting (fonts, colors, layouts) to create visually appealing web pages</p>
                     </div>
                 </div>
             </div>
@@ -106,19 +147,14 @@
                 <!-- Front content -->
                 <div class="logo"><img src="../static/assets/something1.png" alt=""></div>
         <div class="content">
-            <div class="title"> something1</div>
-            <div class="caption"> why this something?</div>
+            <div class="title"> Faster Page Speed</div>
+            <div class="caption"> How does CSS impact page speed?
+            </div>
         </div>
             </div>
             <div class="flip-card-back">
                 <!-- Back content -->
-                <p>Lorem, ipsum dolor sit amet consectetur
-                     adipisicing elit. Numquam optio repellendus
-                      provident esse sapiente, 
-                      vel asperiores, sequi reiciendis
-                       consectetur dignissimos nam ad i
-                     psum eius n
-                     repudiandae vero beatae ratione ex. Sapiente, rem!</p>
+                <p>By enabling concise code, CSS contributes to faster loading times for web pages3.</p>
             </div>
         </div>
     </div>
@@ -129,19 +165,13 @@
                 <!-- Front content -->
                 <div class="logo"><img src="../static/assets/something1.png" alt=""></div>
         <div class="content">
-            <div class="title"> something1</div>
-            <div class="caption"> why this something?</div>
+            <div class="title"> Consistent Styling</div>
+            <div class="caption">What advantage does CSS offer?</div>
         </div>
             </div>
             <div class="flip-card-back">
                 <!-- Back content -->
-                <p>Lorem, ipsum dolor sit amet consectetur
-                     adipisicing elit. Numquam optio repellendus
-                      provident esse sapiente, 
-                      vel asperiores, sequi reiciendis
-                       consectetur dignissimos nam ad i
-                     psum eius n
-                     repudiandae vero beatae ratione ex. Sapiente, rem!</p>
+                <p>CSS ensures consistent styling across various sites, making web content visually cohesive4.</p>
             </div>
         </div>
     </div>

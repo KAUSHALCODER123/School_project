@@ -75,38 +75,6 @@ def XOGame():
      return render_template('index-tictac.html')
 
 
-@app.route('/feedback', methods=['GET', 'POST'])
-def index():
-    form = MyForm()
-    if form.validate_on_submit():
-        # Process form data
-        name = form.name.data
-        review = form.review.data
-
-        # Save the review to MongoDB
-        review_data = {
-            'name': name,
-            'review': review
-        }
-        try:
-            db.saces_data.insert_one(review_data) 
-             # Use the correct collection name
-            return f"Thank you, {name}, for your review: {review}"
-        except Exception as e:
-            return "Error saving review: {str(e)}"
-    return render_template('index.html',form = form)    
-@app.route('/display_data')
-def display_data():
-    # Fetch data from MongoDB collection (e.g., 'saces_data')
-    data_cursor = db.saces_data.find()
-
-    # Convert the cursor to a list of dictionaries
-    data_list = list(data_cursor)
-
-    # Render an HTML template and pass the data to it
-    # (You'll need to create an HTML template for displaying the data)
-    return render_template('display_data.html', data=data_list)
-
 
 
 @app.route('/recipe',methods=['GET','POST'])
