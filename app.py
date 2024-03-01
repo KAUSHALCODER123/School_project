@@ -13,13 +13,10 @@ from flask import Flask, render_template, request
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField
 
-from dotenv import load_dotenv
+
 import os
 
 
-
-load_dotenv()  # Load environment variables
-password = os.environ.get("MONGO_PWD")
 
 app = Flask(__name__)
 app.config["SECRET_KEY"] = "db24c608640f5034b30b8e1e1eb5618ed0ffdbf5"
