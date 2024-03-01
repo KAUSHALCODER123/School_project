@@ -1,0 +1,119 @@
+/* the Urbanist font used from google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap");
+*{
+    font-family: Urbanist;
+}
+a{
+  text-decoration: none;
+}
+.card{
+   margin:auto;
+    display: flex;
+    border:2px solid black;
+    align-items: center;
+    justify-content: space-around;
+    width:70vw;
+    height:60vh;
+    background-color:rgb(235, 234, 234);
+    margin-bottom:4rem ;
+    margin-top: 4rem;;
+    border-radius: 1rem;
+    }
+img{
+    border-radius: 0.5rem;
+    height:30vh;
+}
+.content{
+   
+    border-radius: 0.75rem;;
+    border: 2px solid black;
+    width:50%;
+    height:80%;
+
+}
+
+.img{
+    display:flex;
+    justify-content: space-evenly;
+flex-direction: column;
+}
+button{
+    
+    margin:2rem;
+ color: #820FF4;
+ background-color:  #FFD700;
+padding:0.5rem;
+border-radius: 0.5rem;
+border:none;
+
+border:1px solid black;
+}
+button:hover{
+color: #FFD700;
+    background-color:  #820FF4
+}
+/* The flip card container - set the width and height to your desired dimensions */
+.flip-card {
+  
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  
+    perspective: 1000px; /* Add this for the 3D effect */
+  }
+  
+  /* Container for positioning the front and back sides */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Horizontal flip on hover */
+  .flip-card:hover .flip-card-inner {
+    border-radius: 0.5rem;
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back sides */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hide the backface */
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+      
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+      
+    color: black;
+  }
+  
+  /* Style the back side */
+  .flip-card-back {
+    background-color:rgb(70, 70, 70);
+    color: white;
+    transform: rotateY(180deg);
+    
+  }
+  
+  @media screen and (max-width:768px) {
+
+    .content,.flip-card,.flip-card-back,.flip-card-front,.flip-card-inner{
+      display: none;}
+      img{
+        width:100%;
+
+      }
+  }

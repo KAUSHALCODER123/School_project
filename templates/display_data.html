@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Data</title>
+    <style>
+        /* Selects all table elements */
+table {
+  /* Sets the width of the table to 100% of the parent element */
+  width: 70%;
+  /* Collapses the borders of the table cells */
+  border-collapse: collapse;
+}
+
+/* Selects all table header cells */
+th {
+  /* Sets the background color of the header cells to light blue */
+  background-color: #7d2ae8;
+  
+  /* Sets the text color of the header cells to white */
+  color: white;
+  /* Sets the padding of the header cells to 10 pixels */
+  padding: 1rem;
+}
+
+/* Selects all table data cells */
+td {
+  /* Sets the border of the data cells to 1 pixel solid black */
+  border: 1px solid black;
+  /* Sets the padding of the data cells to 10 pixels */
+  padding: 1rem;
+}
+
+/* Selects all table data cells in odd rows */
+tr:nth-child(odd) {
+  /* Sets the background color of the odd rows to light gray */
+  background-color: lightgray;
+}
+
+    </style>
+</head>
+<body>
+    <h1>Reviews</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Review</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for document in data %}
+                <tr>
+                    <td>{{ document.name }}</td>
+                    <td>{{ document.review }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

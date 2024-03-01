@@ -1,0 +1,217 @@
+@keyframes fade-in{
+from{
+scale:0.7;
+}to{
+    scale:1;
+}
+}
+@keyframes transform{
+    from{
+        transform: translate(300px,300px);
+    }
+    to{
+        transform: translate(400px,400px);
+    }
+}
+@keyframes fadeDown {
+    0% { opacity: 1;  transform: translateY(300px); /* Move left by 50px */
+        transition: opacity 0.5s ease, transform 0.5s ease; }
+    100% { opacity: 1;  transform: translateY(-0px); /* Move left by 50px */
+        transition: opacity 0.5s ease, transform 0.5s ease; }
+  }
+
+.main{
+    animation: fadeDown 5s;
+    animation-timeline: view();
+    animation-range-end: 600px;
+    animation-range-start: content;
+    background-color: rgb(68, 68, 68);
+    
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    padding-bottom: 1%;
+    padding-top: 1%;
+    border-top: 2px  solid black;
+}
+
+.main p{
+    font-size: 1rem;
+    width:60%;
+
+}
+ .center{
+    background-color: rgb(68, 68, 68);
+    align-items: center;
+    justify-content: space-around;
+    display:flex;
+    flex-wrap: wrap;
+    width: 100%;
+     height:100%
+ }
+ .title{ background-color: white;
+    font-size:25px;
+    font-weight: 700;
+   padding-bottom: 7px;
+ }
+ .logo img{
+    
+    width:60px;
+    height:60px;
+    background-color: white;
+}
+.caption{
+    background-color: white;
+    
+}
+.content{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    justify-content: space-around;
+}
+
+.flip-card{
+    background-color: white;
+    border-radius: 1.5rem;
+    display:flex;
+    transform: translateY(120);
+    transition: 2s all ease;
+    flex-direction: column;
+    align-items: center;
+    animation:fade-in linear;
+    animation-timeline:view();
+    
+    animation-duration: 750ms;
+    justify-content: space-around;
+
+    box-shadow: 2px 4px 4px black;
+    height:20rem;
+    width:16rem;
+}
+/* The flip card container - set the width and height to your desired dimensions */
+.flip-card {
+ 
+    
+    border: 1px solid #f1f1f1;
+    perspective: 1000px; /* Add this for the 3D effect */
+  }
+  
+  /* Container for positioning the front and back sides */
+  .flip-card-inner {
+  width:100%;
+  height:100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    text-align: center;
+    border-radius: 1.5rem;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Horizontal flip on hover */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+    box-shadow: 2px 6px 6px black;  
+}
+  
+  /* Position the front and back sides */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+     color:black;
+    border-radius: 1.5rem;
+
+    backface-visibility: hidden; /* Hide the backface */
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-evenly;
+   
+  }
+  
+  /* Style the back side */
+  .flip-card-back {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-evenly;
+    color: black;
+    transform: rotateY(180deg);
+  }
+  
+
+  @keyframes fadeIn {
+    0% { opacity: 0;  transform: translateX(300px); /* Move left by 50px */
+        transition: opacity 0.5s ease, transform 0.5s ease; }
+    100% { opacity: 1;  transform: translateX(-0px); /* Move left by 50px */
+        transition: opacity 0.5s ease, transform 0.5s ease; }
+  }
+  @keyframes fadeOut {
+    0% { opacity: 0;  transform: translateX(-300px); /* Move left by 50px */
+        transition: opacity 0.5s ease, transform 0.5s ease; }
+    100% { opacity: 1;  transform: translateX(-0px); /* Move left by 50px */
+        transition: opacity 0.5s ease, transform 0.5s ease; }
+  }
+.info-data{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    animation: fadeOut 5s;
+    animation-timeline: view();
+    animation-range-end:400px;
+    animation-range-start:content;
+   
+}
+.info-data img{
+    animation: fadeIn 5s;
+    animation-timeline: view();
+    animation-range-end:500px;
+    animation-range-start: content;
+}
+.info-data .abt-us{
+    width:300px;
+    font-size: 16px;
+}
+@media screen and (max-width:600px) {
+  
+    .info-data{
+        flex-direction: column;
+  
+    }
+    .info-data .abt-us{
+        width:80vw;
+    }
+    .abt-us{
+        font-size: 1rem;
+    }
+    img{
+        width:100vw;
+
+    }
+    .main{
+        width: 100vw;
+       
+    }
+    .main p{
+       
+        font-size: 0.65rem;
+        width:100% ;
+    }
+    .center{
+        flex-wrap: wrap;
+    }
+}

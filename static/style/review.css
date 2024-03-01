@@ -1,0 +1,60 @@
+.reviews{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   align-items: center;
+    border:2px solid #820FF4;
+ width:45%;
+ height:10rem;
+ animation: fadeUp 5s;
+    animation-timeline: view();
+    animation-range-end: 500px;
+    animation-range-start: content;
+ border-radius: 8px;
+}
+.reviews:hover{
+   
+    box-shadow: 2px 2px 2px #FFD700;
+}
+@keyframes fadeUp {
+    0% { opacity: 0;  transform: translateY(-200px); /* Move left by 50px */
+        transition: opacity 0.5s ease, transform 0.5s ease; }
+    100% { opacity: 1;  transform: translateY(-0px); /* Move left by 50px */
+        transition: opacity 0.5s ease, transform 0.5s ease; }
+  }
+  @keyframes Down {
+    0% { opacity: 0;  transform: translateY(300px); /* Move left by 50px */
+        transition: opacity 0.5s ease, transform 0.5s ease; }
+    100% { opacity: 1;  transform: translateY(-0px); /* Move left by 50px */
+        transition: opacity 0.5s ease, transform 0.5s ease; }
+  }
+
+
+
+.lower{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+     height:80%;
+    margin-top: 3rem;
+}
+
+.name{
+    color:#820FF4;
+    font-weight: 600;
+    font-size: 24px;
+    padding-bottom: 8px;
+}
+@media screen and (max-width:600px) {
+    .lower{
+      
+        width:80vw;
+    }
+    .lower .reviews{
+        height:5rem;
+        width: 100%;
+    }
+    .reviews .review{
+        font-size: 0.75rem;
+    }
+}
