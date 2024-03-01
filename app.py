@@ -12,7 +12,7 @@ EDAMAM_API_KEY = "02c16f1b8b87d31df6d2852098b8d1cd"
 from flask import Flask, render_template, request
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField
-from flask_pymongo import PyMongo
+
 from dotenv import load_dotenv
 import os
 
